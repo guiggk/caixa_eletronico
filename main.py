@@ -11,12 +11,6 @@ minhaConta.sacar(0)
 print("Valor depois do saque")
 print(minhaConta.getSaldo())
 
-"""
-    1 - Depositar
-    2 - Sacar
-    3 - Saldo
-    4 - Sair
-"""
 option= 0
 back="n"
 while option != 4 and back != "N":
@@ -35,12 +29,4 @@ while option != 4 and back != "N":
     if option == 3:
         print("Você tem R${}".format(minhaConta.getSaldo()))
 print("fim do programa")
-    
-
-
-
-
-
-
-while option != 4:
-    
+        
