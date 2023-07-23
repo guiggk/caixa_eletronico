@@ -4,7 +4,7 @@ class Conta:
         self.banco = banco
         self.NomeTitular= NomeTitular
         self.saldo = 0
-         
+
     def depositar(self, valorADepositar):
         self.saldo += valorADepositar
         
