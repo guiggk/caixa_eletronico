@@ -11,14 +11,16 @@ minhaConta.sacar(0)
 print("Valor depois do saque")
 print(minhaConta.getSaldo())
 
-option= '0'
-back="n"
-while option != '4' and back != "N":
+back="N"
+while True:
     print("===MENU===")
     print("acessando a conta de {}".format(minhaConta.NomeTitular))
     print("\033[1;37m[1]\033[m-Depositar\n\033[1;37m[2]\033[m-Sacar\n\033[1;37m[3]\033[m-Verificar o Saldo\n\033[1;37m[4]\033[m-Sair")
     option=input("Qual opção deseja executar?\n").strip()
-    if option == '1':
+    if option == '4':
+        print("fim do programa")
+        break
+    elif option == '1':
         while True:
             deposito=input("Quanto deseja depositar?\nR$").strip()
 
@@ -35,6 +37,7 @@ while option != '4' and back != "N":
             if sacar.isdigit():
                 sacar=float(sacar)
                 minhaConta.sacar(sacar)
+                print("Você sacou {:.2f} do seu saldo".format(sacar))
                 break
             else:
                 print("\033[1;31mOpção inválida. Por favor, digite apenas números!!\033[m")
@@ -47,5 +50,7 @@ while option != '4' and back != "N":
         if back == "S" or back == "N":
             break
         print("\033[1;31mOpção inválida,Por favor digite apenas oque esta sendo mostrado!!\033[m")
-print("fim do programa")
+    if back == 'N':
+        print("fim do programa")
+        break
         
